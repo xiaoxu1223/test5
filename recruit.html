@@ -1,0 +1,399 @@
+<style type="text/css">
+    input:focus, textarea:focus {
+        outline: none;
+    }
+
+    body {
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+    .advertisingSpace {
+        background-color: #1E9FFF;
+        width: 75%;
+        height: 150px;
+    }
+
+    .msgModel {
+        margin-top: 20px;
+        background-color: white;
+        min-height: 300px;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 3px;
+    }
+
+    .msgModel .top {
+        height: 50px;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 5px solid #C1C1C1;
+    }
+
+    .msgModel .top .title {
+        height: 100%;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    .msgModel .top .search {
+        height: 100%;
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .msgModel .top .search .inputField {
+        background-color: #0066CC;
+        width: 65%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .msgModel .top .search .inputField .inputStyle {
+        background-color: white;
+        width: 98%;
+        height: 83%;
+        border: 0px solid white;
+    }
+
+    .msgModel .top .search .searchButton {
+        background-color: #0066CC;
+        width: 35%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: 'Alibaba-PuHuiTi-Regular';
+    }
+
+    .msgModel .msgBody {
+        margin-top: 10px;
+        height: 90%;
+        width: 90%;
+    }
+
+    .msgModel .msgBody .outlineBorder {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 2px solid #F4F4F4;
+        font-family: 'AlibabaSans-Black';
+        font-size: 14px;
+    }
+
+    .sendModel {
+        margin-top: 20px;
+        background-color: white;
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sendModel .outlineBorder {
+        width: 90%;
+        height: 95%;
+    }
+
+    .sendModel .outlineBorder .title {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        border-bottom: 5px solid #C1C1C1;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    .sendModel .outlineBorder .inputField {
+        margin-top: 10px;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        background-color: #F4F4F4;
+    }
+
+    .sendModel .outlineBorder .deletePassword {
+        margin-top: 20px;
+        background-color: #F4F4F4;
+        width: 20%;
+        height: 40px;
+    }
+
+    .sendModel .outlineBorder .identifyingCode {
+        margin-top: 20px;
+        background-color: yellow;
+        height: 40px;
+        width: 20%;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .sendModel .outlineBorder .identifyingCode .left {
+        background-color: #FD482C;
+        height: 100%;
+        width: 50%;
+    }
+
+    .sendModel .outlineBorder .identifyingCode .right {
+        background-color: #1E9FFF;
+        height: 100%;
+        width: 50%;
+    }
+
+    .sendModel .outlineBorder .send {
+        background-color: white;
+        margin-bottom: 20px;
+        width: 20%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        color: white;
+    }
+
+    .sendModel .outlineBorder .send .left {
+        background-color: yellowgreen;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+    }
+    .sendModel .outlineBorder .send .left:hover{
+        background-color: yellowgreen;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor:pointer;
+    }
+    .sendModel .outlineBorder .send .left:active{
+        color:yellow;
+        transform:scale(0.97);
+        -ms-transform:rotate(0.97); 	/* IE 9 */
+        -moz-transform:rotate(0.97); 	/* Firefox */
+        -webkit-transform:rotate(0.97); /* Safari 和 Chrome */
+        -o-transform:rotate(0.97); 	/* Opera */
+    }
+    .sendModel .outlineBorder .send .right {
+        background-color: #7A8B8B;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        margin-left: 5px;
+    }
+    .sendModel .outlineBorder .send .right:hover{
+        background-color: #7A8B8B;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor:pointer;
+    }
+    .sendModel .outlineBorder .send .right:active{
+        color:yellow;
+        transform:scale(0.97);
+        -ms-transform:rotate(0.97); 	/* IE 9 */
+        -moz-transform:rotate(0.97); 	/* Firefox */
+        -webkit-transform:rotate(0.97); /* Safari 和 Chrome */
+        -o-transform:rotate(0.97); 	/* Opera */
+    }
+    .sendModel .outlineBorder .inputField textarea{
+        border: 0px solid white;
+        width: 100%;
+        height: 100%;
+        background-color: #F4F4F4;
+    }
+    .sendModel .outlineBorder .deletePassword input{
+        border: 0px solid white;
+        width: 100%;
+        height: 100%;
+        background-color: #F4F4F4;
+    }
+    .sendModel .outlineBorder .identifyingCode .left input{
+        border: 0px solid white;
+        width: 100%;
+        height: 100%;
+        background-color: #F4F4F4;
+    }
+    .bottomPage {
+        margin-top: 20px;
+        height: 50px;
+        width: 75%;
+        background-color: blue;
+        margin-bottom: 50px;
+        border-radius: 3px;
+    }
+</style>
+<body>
+<div class="advertisingSpace">
+</div>
+<div class="msgModel">
+    <div class="top">
+        <div class="title">招聘</div>
+        <div class="search">
+            <div class="inputField">
+                <input placeholder="输入搜索内容" class="inputStyle">
+            </div>
+            <div class="searchButton">
+                搜索一下
+            </div>
+        </div>
+    </div>
+    <div class="msgBody">
+        <div class="outlineBorder">
+            <img src="/static/icon/recruit.png" style="height: 32px;">
+            <div style="width: 80%;text-indent:50px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：
+            </div>
+            <div style="text-indent:50px;color: #0066CC;">2019年8月28日</div>
+        </div>
+        <div class="outlineBorder">
+            <img src="/static/icon/recruit.png" style="height: 32px;">
+            <div style="width: 80%;text-indent:50px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：
+            </div>
+            <div style="text-indent:50px;color: #0066CC;">2019年8月28日</div>
+        </div>
+        <div class="outlineBorder">
+            <img src="/static/icon/recruit.png" style="height: 32px;">
+            <div style="width: 80%;text-indent:50px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：
+            </div>
+            <div style="text-indent:50px;color: #0066CC;">2019年8月28日</div>
+        </div>
+        <div class="outlineBorder">
+            <img src="/static/icon/recruit.png" style="height: 32px;">
+            <div style="width: 80%;text-indent:50px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：
+            </div>
+            <div style="text-indent:50px;color: #0066CC;">2019年8月28日</div>
+        </div>
+        <div class="outlineBorder">
+            <img src="/static/icon/recruit.png" style="height: 32px;">
+            <div style="width: 80%;text-indent:50px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：
+            </div>
+            <div style="text-indent:50px;color: #0066CC;">2019年8月28日</div>
+        </div>
+        <div class="outlineBorder">
+            <img src="/static/icon/recruit.png" style="height: 32px;">
+            <div style="width: 80%;text-indent:50px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：
+            </div>
+            <div style="text-indent:50px;color: #0066CC;">2019年8月28日</div>
+        </div>
+        <div class="outlineBorder">
+            <img src="/static/icon/recruit.png" style="height: 32px;">
+            <div style="width: 80%;text-indent:50px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：
+            </div>
+            <div style="text-indent:50px;color: #0066CC;">2019年8月28日</div>
+        </div>
+        <div class="outlineBorder">
+            <img src="/static/icon/recruit.png" style="height: 32px;">
+            <div style="width: 80%;text-indent:50px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：
+            </div>
+            <div style="text-indent:50px;color: #0066CC;">2019年8月28日</div>
+        </div>
+        <div class="outlineBorder">
+            <img src="/static/icon/recruit.png" style="height: 32px;">
+            <div style="width: 80%;text-indent:50px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：
+            </div>
+            <div style="text-indent:50px;color: #0066CC;">2019年8月28日</div>
+        </div>
+        <div class="outlineBorder">
+            <img src="/static/icon/recruit.png" style="height: 32px;">
+            <div style="width: 80%;text-indent:50px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：诚聘童装批发男女服务员18到35周岁要求吃苦耐劳精明能干工资3000-6000地址：
+            </div>
+            <div style="text-indent:50px;color: #0066CC;">2019年8月28日</div>
+        </div>
+    </div>
+
+</div>
+<div class="sendModel">
+    <div class="outlineBorder">
+        <div class="title">
+            发布求职
+        </div>
+        <div class="inputField">
+            <textarea id="region" rows="3" cols="20" placeholder="请输入要发布的内容"></textarea>
+        </div>
+        <div class="deletePassword">
+            <input type="text" id="reg" placeholder="请输入删除密码" oninput="if(value.length>10)value=value.slice(0,10)">
+        </div>
+        <div class="identifyingCode">
+            <div class="left">
+                <input id="ron" placeholder="请输入验证码">
+            </div>
+            <div class="right" onclick="updateCaptcha()">
+                <img src="{:url('getCaptcha')}" style="width: 100%;height: 100%;" id="captcha">
+            </div>
+        </div>
+        <div class="send">
+            <div class="left" onclick=f()>
+                发布
+            </div>
+            <div class="right" onclick=clean()>
+               清空
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="bottomPage">
+
+</div>
+</body>
+{include file="public/publicJs,public/header,public/fonts" /}
+<script type="text/javascript">
+    function updateCaptcha() {
+        var getCaptcha = "{:url('getCaptcha')}";
+        $('#captcha').attr('src', getCaptcha);
+    }
+    function clean()
+    {
+        /*document.getElementById("region").value="";
+        document.getElementById("reg").value="";
+        document.getElementById("ron").value="";*/
+        $("#region,#reg,#ron").val("");
+    }
+    function f(){
+        var regionName = document.getElementById("region").value;
+        var regName = document.getElementById("reg").value;
+        var ronName = document.getElementById("ron").value;
+        var j
+        console.log(regionName + "  " + regName +" " + ronName);
+    }
+
+
+</script>

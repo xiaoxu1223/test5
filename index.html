@@ -1,0 +1,402 @@
+<style type="text/css">
+    input:focus, textarea:focus {
+        outline: none;
+    }
+
+    body {
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /**
+    广告位
+    */
+    .top {
+        height: 100px;
+        width: 75%;
+        background-color: #003399;
+    }
+
+    /**
+    导航
+     */
+    .navigation {
+        font-family: 'Alibaba-PuHuiTi-Regular';
+        border-top: 3px solid rgb(0, 102, 204);
+        border-bottom: 3px solid rgb(0, 102, 204);
+        height: 41px;
+        width: 75%;
+        background-color: rgb(0, 102, 204);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navigation .cutOffRule {
+        background-color: white;
+        width: 1px;
+        height: 70%;
+        border-radius: 3px;
+    }
+
+    /**
+    按钮入口
+     */
+    .navigation .buttonEntrance {
+        height: 100%;
+        width: 130px;
+        background-color: rgb(0, 102, 204);
+        color: white;
+        font-size: medium;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2px;
+    }
+
+    .buttonEntrance:hover {
+        font-size: 19px;
+        cursor: pointer;
+    }
+
+    .recommend {
+        height: 500px;
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+    }
+
+    .recommend .rollLeft {
+        height: 100%;
+        width: 80%;
+    }
+
+    .recommend .rollRight {
+        height: 100%;
+        width: 20%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rollRight .userOne {
+        width: 70%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .userOne .rowTitle {
+        color: #1a1a1a;
+        position: relative;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .userOne .row {
+        color: #ebebeb;
+        height: 15%;
+        width: 100%;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        border-bottom: 1px solid #ebebeb;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .userOne .row .left {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+
+    .userOne .row .right {
+        width: 50%;
+        height: 100%;
+        font-size: 0.7em;
+        color: #0066CC;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .userOne .rowBottom {
+        color: #ebebeb;
+        height: 15%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 22px;
+        background-color: #0066CC;
+    }
+
+    .rollRight .news {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news .title {
+        height: 15%;
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-bottom: 3px solid #ebebeb;
+    }
+
+    .news .title .menu {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .news .content {
+        height: 80%;
+        width: 95%;
+        font-size: 13px;
+        overflow: hidden;
+        color: black;
+        line-height: 25px;
+    }
+
+    .waistSeal {
+        margin-top: 20px;
+        height: 120px;
+        width: 75%;
+        background-color: white;
+        border-radius: 3px;
+    }
+
+    .synthesize {
+        height: 550px;
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .synthesize .msg {
+        width: 32%;
+        height: 95%;
+        background-color: white;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .synthesize .msg .insideCasing {
+        height: 95%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .insideCasing .title {
+        height: 10%;
+        width: 100%;
+        font-size: 1.5em;
+        font-weight: bold;
+        border-bottom: 3px solid #EBEBEB;
+        display: flex;
+        align-items: center;
+    }
+
+    .insideCasing .insideCasingMsgOutlineBorder {
+        height: 90%;
+        width: 100%;
+    }
+
+    .friendlyLink {
+        height: 150px;
+        width: 75%;
+        background-color: white;
+        border-radius: 3px;
+        margin-bottom: 20px;
+    }
+
+    .bottomPage {
+        height: 50px;
+        width: 75%;
+        background-color: white;
+        margin-bottom: 50px;
+        border-radius: 3px;
+    }
+</style>
+<body>
+<div class="top">
+</div>
+<div class="navigation">
+    <div class="buttonEntrance" onclick="home()">
+        首页
+    </div>
+    <div class="cutOffRule"></div>
+    <div class="buttonEntrance">
+        招工
+    </div>
+    <div class="cutOffRule"></div>
+    <div class="buttonEntrance">
+        求职
+    </div>
+    <div class="cutOffRule"></div>
+    <div class="buttonEntrance">
+        征婚交友
+    </div>
+    <div class="cutOffRule"></div>
+    <div class="buttonEntrance">
+        失物招领
+    </div>
+    <div class="cutOffRule"></div>
+    <div class="buttonEntrance">
+        二手交易
+    </div>
+    <div class="cutOffRule"></div>
+    <div class="buttonEntrance">
+        房产信息
+    </div>
+    <div class="cutOffRule"></div>
+
+    <div class="buttonEntrance">
+        贴吧
+    </div>
+    <div class="cutOffRule"></div>
+    <div class="buttonEntrance">
+        关于我们
+    </div>
+    <div class="cutOffRule"></div>
+</div>
+<div class="recommend">
+    <div class="rollRight">
+        <div class="userOne">
+            <div class="rowTitle">
+                快捷登录
+            </div>
+            <div class="row">
+                <div class="left">
+                    <input type="tel" value="" name="username" class="Input" placeholder="手机号"
+                           style="border: 0px solid white">
+                </div>
+            </div>
+            <div class="row">
+                <div class="left">
+                    <input type="tel" value="" name="username" class="Input" placeholder="验证码"
+                           style="border: 0px solid white">
+                </div>
+                <div class="right">
+                    获取手机验证码
+                </div>
+            </div>
+            <div class="rowBottom">
+                登陆
+            </div>
+        </div>
+        <div class="news">
+            <div class="title">
+                <div class="menu" style="background-color: #ebebeb;">公告</div>
+                <div class="menu">要闻</div>
+            </div>
+            <div class="content">
+                <div>【要闻】田先生和习亲切会晤</div>
+                <div>【要闻】田先生和习亲切会晤</div>
+                <div>【要闻】田先生和习亲切会晤</div>
+                <div>【要闻】田先生和习亲切会晤</div>
+                <div>【要闻】田先生和习亲切会晤</div>
+                <div>【要闻】田先生和习亲切会晤</div>
+                <div>【要闻】田先生和习亲切会晤</div>
+                <div>【要闻】田先生和习亲切会晤</div>
+                <div>【要闻】田先生和习亲切会晤</div>
+                <div>【要闻】田先生和习亲切会晤</div>
+                <div>【要闻】田先生和习亲切会晤</div>
+                <div>【要闻】田先生和习亲切会晤</div>
+                <div>【要闻】田先生和习亲切会晤</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rollLeft">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-color: #666699;">
+                    <img src="/static/icon/508518a4ae8e1.jpg"
+                         style="height: 100%;width: 100%;">
+                </div>
+                <div class="swiper-slide" style="background-color: #FFFF00;">
+                    <img src="/static/icon/606917.jpg"
+                         style="height: 100%;width: 100%;">
+                </div>
+                <div class="swiper-slide" style="background-color: #FF0033;">
+                    <img src="/static/icon/timg.jfif"
+                         style="height: 100%;width: 100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="waistSeal">
+    <img src="/static/icon/606917.jpg" style="width: 100%;height: 100%;border-radius: 3px;">
+</div>
+<div class="synthesize">
+    <div class="msg">
+        <div class="insideCasing">
+            <div class="title">
+                招工
+            </div>
+            <div class="insideCasingMsgOutlineBorder">
+            </div>
+        </div>
+    </div>
+    <div class="msg">
+        <div class="insideCasing">
+            <div class="title">
+                求职
+            </div>
+            <div class="insideCasingMsgOutlineBorder">
+            </div>
+        </div>
+    </div>
+    <div class="msg">
+        <div class="insideCasing">
+            <div class="title">
+                二手交易
+            </div>
+            <div class="insideCasingMsgOutlineBorder">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="friendlyLink">
+
+</div>
+<div class="bottomPage">
+
+</div>
+</body>
+{include file="public/publicJs,public/header,public/fonts" /}
+<script type="text/javascript">
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: true,
+        loop: true,
+    });
+
+    function home() {
+        layer.msg('首页', {time: 600, icon: 5});
+    }
+</script>
+</html>
